@@ -1,0 +1,8 @@
+<h1>Post your Blog</h1>
+<form action="/posts" method="post">
+    <input type="text" name="post[image]" placeholder="Image url..."><br>
+    <input type="text" name="post[title]" placeholder="Title?"> <br>
+    <textarea name="post[description]" placeholder="Description?"></textarea>
+        <%= token_tag form_authenticity_token %><br>
+    <button> Save Posts </button>
+</form>
