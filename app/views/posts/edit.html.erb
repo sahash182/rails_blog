@@ -1,0 +1,11 @@
+<h1>Edit Post</h1>
+<form action="/posts/<%= @post.id %>" method="post">
+	<input name="_method" type="hidden" value="put">
+    <input type="text" name="post[image]" placeholder="Image url.." value="<%= @post.image%>"><br>
+    <input type="text" name="post[title]" placeholder="Title?" value="<%= @post.title%>"><br>
+    <textarea name="post[description]" placeholder="<%= @post.description%>" value="<%= @post.description%>"></textarea><br>
+        <%= token_tag form_authenticity_token %>
+
+
+    <button> Save Post </button>
+</form>

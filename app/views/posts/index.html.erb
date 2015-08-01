@@ -31,17 +31,24 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-   <h1>Your Blogs</h1>
+   <h1>My Blogs</h1>
+   <div class="well" width="100px">
 	
-	<% @posts.each do |post| %>
-		<div>
-			<img src='<%= post.image %>' width="200px"/><br>
+		<% @posts.each do |post| %>
+			<div>
+				<img src='<%= post.image %>' width="200px"/><br>
 	
-			<strong>Title:</strong> <%= post.title %> <br>
+				<strong>Title:</strong> <%= post.title %> <br>
 
-			<strong>Description:</strong> <%= post.description %> <br>
-		</div> <br>
-	<% end %>
+				<strong>Description:</strong> <%= post.description %> <br>
+		
+				<%= link_to "Edit Post", edit_post_path(post), class: "btn btn-primary", id:"linkId" %>
+				<br>
+				<%= link_to "Delete", post, class: "btn btn-danger", id:"linkId" %>
+			
+			</div> <br>
+		<% end %>
+	</div>
 
 
   <div class="container">
