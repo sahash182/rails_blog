@@ -1,8 +1,7 @@
 
-
 <!-- bootstrap ruby style  -->
 <div class="container">
-	<h2><center>Edit Post</h2></center>
+	<h1>Edit Post</h1>
  		<%= form_for @post, :html => {:class => "form-horizontal center"} do |f| %>
     		<div class="form-group">
         		<%= f.label :image, "Image url:", class: "col-sm-2 control-label" %>
@@ -21,7 +20,7 @@
       			<div class="col-sm-8">
         			<%= f.text_area :description, class: "form-control" %>
       			</div>
-    			<center> <%= f.submit "Submit Post", class: "btn btn-primary" %></center> 
+    			<center> <%= f.submit "Submit Post", class: "btn btn-primary"  %></center> 
     		</div>
               
          <% end %>

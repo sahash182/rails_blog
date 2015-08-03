@@ -1,13 +1,18 @@
-<div>
-	<h1>This is one post.</h1>
 
-
-	<div>
-		 <img src='<%= @post.image %>' width="200px"/><br>
+ <div clas="conatainer"> 
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2">
+          <h1><center>Your Blog-post</center></h1>
+          <br>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="well">
+				    <img src='<%= @post.image %>' width="200px"/><hr>
 	
-		<strong>Title:</strong> <%= @post.title %> <br>
+			        <strong>Title:</strong> <%= @post.title %> <br>
 
-		<strong>Description:</strong> <%= @post.description %> <br>
-	</div> <br>
-
-</div>
+			 	    <strong>Description:</strong> <%= @post.description %>
+			   </div>
+			</div> <br>
+	    </div>
+    </div>
+ </div>
