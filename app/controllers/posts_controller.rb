@@ -4,13 +4,16 @@ class PostsController < ApplicationController
   	render :index
   end
   def new
+    @post = Post.new
   	render :new
   end
   def create
 	# raise params.inspect
-	post = params.require(:post).permit(:image, :title, :description)
-	Post.create(post)
-    redirect_to "/posts"
+	post_params = params.require(:post).permit(:image, :title, :description)
+	post = Post.create(post_params)
+  # redirect_to "/posts"
+  redirect_to "/posts/#{post.id}"
+
     
   end
   def show

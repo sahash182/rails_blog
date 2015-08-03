@@ -1,11 +1,28 @@
-<h1>Edit Post</h1>
-<form action="/posts/<%= @post.id %>" method="post">
-	<input name="_method" type="hidden" value="put">
-    <input type="text" name="post[image]" placeholder="Image url.." value="<%= @post.image%>"><br>
-    <input type="text" name="post[title]" placeholder="Title?" value="<%= @post.title%>"><br>
-    <textarea name="post[description]" placeholder="<%= @post.description%>" value="<%= @post.description%>"></textarea><br>
-        <%= token_tag form_authenticity_token %>
 
 
-    <button> Save Post </button>
-</form>
+<!-- bootstrap ruby style  -->
+<div class="container">
+	<h2><center>Edit Post</h2></center>
+ 		<%= form_for @post, :html => {:class => "form-horizontal center"} do |f| %>
+    		<div class="form-group">
+        		<%= f.label :image, "Image url:", class: "col-sm-2 control-label" %>
+        			<div class="col-sm-8">
+        				<%= f.text_field :image, class: "form-control" %>
+     				</div>
+    		</div>
+    		<div class="form-group">
+      			<%= f.label :title, "Title:", class: "col-sm-2 control-label" %>
+      			<div class="col-sm-8">
+        			<%= f.text_field :title, class: "form-control" %>
+      			</div>
+    		</div>
+    		<div class="form-group">
+      			<%= f.label :description, "Description:", class: "col-sm-2 control-label" %>
+      			<div class="col-sm-8">
+        			<%= f.text_area :description, class: "form-control" %>
+      			</div>
+    			<center> <%= f.submit "Submit Post", class: "btn btn-primary" %></center> 
+    		</div>
+              
+         <% end %>
+</div>

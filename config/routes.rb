@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'home/index'
+
   # get 'posts/index'
 
-root to: "posts#index"
+root to: "home#index"
+resources :home 
 
 resources :posts
 
