@@ -1,9 +1,13 @@
 body {
-    background-image: url(<%= asset_path   "backgroundcity.jpg"%>);
+    background-image: url(image_path('backgroundcity.jpg'));
     background-size: cover;
 }
 h1{
 	color:white;
+}
+li{
+	font-family:"comic sans MS", sans-serif;
+	color: #5F4C0B;
 }
 .myimage{
 	text-align: center;
@@ -15,17 +19,14 @@ h1{
 	font-size: 24px;
 	text-align: center;
 }
-.navbar-brand{
-
-	font-family:"comic sans MS", sans-serif;
-	color: #5F4C0B;
-}
 .social{
 	text-align: center;
 	font-size: 60px;
 	margin-bottom: 80px;
 }
-
+.col-sm-2{
+	color:white;
+}
 /*// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
